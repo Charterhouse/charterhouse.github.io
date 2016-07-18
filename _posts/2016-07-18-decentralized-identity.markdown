@@ -17,4 +17,4 @@ This brings us to some of the topics we want to look at this week.
 * What (decentralized) identity systems are out there?
 * If you have all these identities, you need to manage them somehow. Like a wallet manages your Bitcoin addresses, we need something to manage our identities. What would we call that, and what does it look like? This is a usability and design challenge!
 * How does such an identity system integrate with existing online platforms like Facebook?
-* We want to talk to people who have thought about this before! Please contact myself (Stefan van den Oord) or Mark Spanbroek if you have.
+* We want to talk to people who have thought about this before! Please contact us by [leaving a comment](https://github.com/Charterhouse/charterhouse.github.io/issues/1).
