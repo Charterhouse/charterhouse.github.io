@@ -77,7 +77,7 @@ The fact that there are shortcomings is only natural considering the maturity of
 
 The big remaining question is whether Whisper will perform at scale. Only time will tell.
 
-
+[Questions? Comments?](https://github.com/Charterhouse/charterhouse.github.io/issues/2)
 
 [1]: https://github.com/ethereum/go-ethereum
 [2]: https://github.com/ethereum/wiki/wiki/JSON-RPC
