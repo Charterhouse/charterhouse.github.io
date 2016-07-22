@@ -30,7 +30,8 @@ given facet of your diamond is valid. For example, a university can attest that
 you have truly graduated there. A government can attest that you are a citizen
 of that country. A sports club can attest that you are a member of that club. And
 then you get into things like: how long is an attestation valid? How do you
-revoke an attestation? There is also [work][7] done on a logical framework for
+revoke an attestation? How do you calculate the strength of in identity based on
+the attestations? There is also [work][7] done on a logical framework for
 dealing with attestations so that you can prove certain claims, for example.
 
 When you talk about using identity in practical applications, the term
@@ -69,6 +70,10 @@ into if we would use Blockstack in applications.
 
 ### MARK SPANBROEK OVER OPZETTEN BLOCKSTACK SERVER
 
+uPort
+-----
+### TODO
+
 Eris
 ----
 As always, we wanted to try and actually write some code as part of this
@@ -86,11 +91,11 @@ contracts ([The Five Types Model][15] and [An Action-Driven Architecture][16]).
 Unfortunately time ran out before we could actually build our own first simple
 identity system. But we do have some ideas on how to continue from here.
 
-Interesting Links
------------------
+Other Interesting Links
+-----------------------
 * Hardjono, Pentland, [On Privacy-Preserving Identity within Future Blockchain Systems][2] (About the MIT project [ChainAnchor][3])
 * [A collection of Blockchain Identity links][4]
-
+* [Rebooting the Web-of-Trust][17]
 
 [1]: https://charterhouse.github.io/2016/07/18/decentralized-identity.html
 [2]: https://www.w3.org/2016/04/blockchain-workshop/interest/hardjono-pentland.html
@@ -108,3 +113,4 @@ Interesting Links
 [14]: https://docs.erisindustries.com/tutorials/
 [15]: https://docs.erisindustries.com/tutorials/solidity/solidity-1
 [16]: https://docs.erisindustries.com/tutorials/solidity/solidity-2
+[17]: https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust
