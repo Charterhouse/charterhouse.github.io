@@ -47,11 +47,13 @@ Since this is the first time that we wanted to write our own smart contracts, we
 
 Unfortunately time ran out before we could actually build our own first simple identity system. But we do have some ideas on how to continue from here.
 
-Other Interesting Links
------------------------
-* Hardjono, Pentland, [On Privacy-Preserving Identity within Future Blockchain Systems][2] (About the MIT project [ChainAnchor][3])
-* [A collection of Blockchain Identity links][4]
-* [Rebooting the Web-of-Trust][17]
+ChainAnchor
+-----------
+MIT seems to be developing an identity system that attempts to address [not only the technical and privacy aspects of identity, but also the legal framework][2]. It’s called [ChainAnchor][3], but there is not much information available yet.
+
+Further reading
+---------------
+If you’d like to read more about decentralized identity then this collection of [Blockchain Identity links][4] is a good starting point, as are the documents from the [Rebooting the Web-of-Trust][17] workshops.
 
 [Questions? Comments?][19]
 
