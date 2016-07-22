@@ -11,7 +11,7 @@ This week we have done research and experiments around the topic of Decentralize
 
 There is a lot to take in on this topic. If you're not careful to limit the scope, it quickly becomes large and complicated. For example, it may seem logical to make an identity system hierarchical in terms of how strong an identity is. Higher up in the hierarchy identities are stronger (think e.g. identities issued by governments), but for things like simple web site logins you want to use an identity lower in the hierarchy.
 
-This made us think of BIP32 and HD wallets. We learned that there are some intricacies when dealing with hierarchical keys. For instance under certain conditions it is actually [possible to prove][5] that two public keys have a parent-child relationship. Or if you’re not careful, you could inadvertently [expose your private key as well][18]. So you need to be careful about exposing public keys, which given their name is rather unexpected. 
+This made us think of BIP32 and HD wallets. We learned that there are some intricacies when dealing with hierarchical keys. For instance under certain conditions it is actually [possible to prove][5] that two public keys have a parent-child relationship. Or if you’re not careful, you could inadvertently [expose your private key as well][18]. So you need to be careful about exposing public keys, which given their name is rather unexpected. We also learned what the [difference is between a hardened and a non-hardened public key][20]: hardened keys are not vulnerable to the above, but if you want to derive public keys from another (extended) public key, those derived keys are non-hardened.
 
 As an aside: we were wondering what would be a good name for an application that manages your identities. The term “wallet” suggests “money”, not “identity”.
 
@@ -74,3 +74,4 @@ Other Interesting Links
 [17]: https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust
 [18]: https://bitcoinmagazine.com/articles/deterministic-wallets-advantages-flaw-1385450276
 [19]: https://github.com/Charterhouse/charterhouse.github.io/issues/3
+[20]: http://bitcoin.stackexchange.com/questions/37488/eli5-whats-the-difference-between-a-child-key-and-a-hardened-child-key-in-bip3
