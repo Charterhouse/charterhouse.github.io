@@ -9,7 +9,11 @@ Decentralized Identity - Findings
 
 This week we have done research and experiments around the topic of Decentralized Identity. We started by writing down [our thoughts on what decentralized identity is about][1].
 
-There is a lot to take in on this topic. If you're not careful to limit the scope, it quickly becomes large and complicated. For example, it seems logical to make an identity system hierarchical in terms of how strong an identity is. Higher up in the hierarchy identities are stronger (think e.g. identities issued by governments), but for things like simple web site logins you want to use an identity lower in the hierarchy. This of course made us think of BIP32 and HD wallets. (Side note: I now understand that an address in Bitcoin is a one-way hash of a public key, and that under certain conditions it is actually [possible to prove][5] that two public keys have a parent-child relationship.) (Other side node: what would be a good name for an application that manages your identities? Like a wallet for bitcoin addresses, but then for identities.)
+There is a lot to take in on this topic. If you're not careful to limit the scope, it quickly becomes large and complicated. For example, it may seem logical to make an identity system hierarchical in terms of how strong an identity is. Higher up in the hierarchy identities are stronger (think e.g. identities issued by governments), but for things like simple web site logins you want to use an identity lower in the hierarchy.
+
+This made us think of BIP32 and HD wallets. We learned that there are some intricacies when dealing with hierarchical keys. For instance under certain conditions it is actually [possible to prove][5] that two public keys have a parent-child relationship. Or if you’re not careful, you could inadvertently [expose your private key as well][18]. So you need to be careful about exposing public keys, which given their name is rather unexpected. 
+
+As an aside: we were wondering what would be a good name for an application that manages your identities. The term “wallet” suggests “money”, not “identity”.
 
 Another part of identity is _attestations_. You can setup an identity system so that other participants of the identity system can attest that you are really you. Or, using [Christopher Poole's analogy][6] of facets of a diamond: that a given facet of your diamond is valid. For example, a university can attest that you have truly graduated there. A government can attest that you are a citizen of that country. A sports club can attest that you are a member of that club. And then you get into things like: how long is an attestation valid? How do you revoke an attestation? How do you calculate the strength of in identity based on the attestations? There is also [work][7] done on a logical framework for dealing with attestations so that you can prove certain claims, for example.
 
@@ -49,6 +53,8 @@ Other Interesting Links
 * [A collection of Blockchain Identity links][4]
 * [Rebooting the Web-of-Trust][17]
 
+[Questions? Comments?][19]
+
 [1]: https://charterhouse.github.io/2016/07/18/decentralized-identity.html
 [2]: https://www.w3.org/2016/04/blockchain-workshop/interest/hardjono-pentland.html
 [3]: http://trust.mit.edu
@@ -66,3 +72,5 @@ Other Interesting Links
 [15]: https://docs.erisindustries.com/tutorials/solidity/solidity-1
 [16]: https://docs.erisindustries.com/tutorials/solidity/solidity-2
 [17]: https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust
+[18]: https://bitcoinmagazine.com/articles/deterministic-wallets-advantages-flaw-1385450276
+[19]: https://github.com/Charterhouse/charterhouse.github.io/issues/3
