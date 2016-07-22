@@ -12,38 +12,38 @@ Decentralized Identity. We started by writing down [our thoughts on what
 decentralized identity is about][1].
 
 There is a lot to take in on this topic. If you're not careful to limit the
-scope, it quickly becomes very large and complicated. For example, it seems
-logical to make an identity system hierarchical in terms of how strong an
-identity is: higher up in the hierarchy identities are very strong (think e.g.
-identities issued by governments), but for things like simple web site logins
-you want to use an identity lower in the hierarchy. This of course made is think
-of BIP32 and HD wallets. (Side note: I now understand that an address in Bitcoin
-is a one-way hash of a public key, and that under certain conditions it is
-actually [possible to prove][5] that two public keys have a parent-child
-relationship.)
+scope, it quickly becomes large and complicated. For example, it seems logical
+to make an identity system hierarchical in terms of how strong an identity is.
+Higher up in the hierarchy identities are stronger (think e.g. identities issued
+by governments), but for things like simple web site logins you want to use an
+identity lower in the hierarchy. This of course made us think of BIP32 and HD
+wallets. (Side note: I now understand that an address in Bitcoin is a one-way
+hash of a public key, and that under certain conditions it is actually [possible
+to prove][5] that two public keys have a parent-child relationship.) (Other side
+node: what would be a good name for an application that manages your identities?
+Like a wallet for bitcoin addresses, but then for identities.)
 
 Another part of identity is _attestations_. You can setup an identity system so
 that other participants of the identity system can attest that you are really
 you. Or, using [Christopher Poole's analogy][6] of facets of a diamond: that a
 given facet of your diamond is valid. For example, a university can attest that
-you have really graduated there. A government can attest that you're a citizen
-of that country. A sports club can attest that you're a member of that club. And
+you have truly graduated there. A government can attest that you are a citizen
+of that country. A sports club can attest that you are a member of that club. And
 then you get into things like: how long is an attestation valid? How do you
 revoke an attestation? There is also [work][7] done on a logical framework for
 dealing with attestations so that you can prove certain claims, for example.
 
 When you talk about using identity in practical applications, the term
-"selective disclosure" will quickly pop up. It simply means the ability to show
-or hide information to specific identities. This is very complicated to get
-right, and also very application dependent. For example, in a medical context,
-when a patient logs his weight in a medical record like system, she can of
-course determine who can see that information. But suppose she is being treated
-for something by more than one doctor. Doctor 1 stores her blood pressure, and
-only the patient and doctor 1 can see it. Then doctor 2 comes along. He cannot
-see that the blood pressure is available in the medical record, so how can he
-request access? What happens if he also stores a blood pressure measurement: can
-doctor 1 see it or not? Scenarios like that need to be carefully considered in
-the proper context.
+"selective disclosure" will pop up sooner or later. It simply means the ability
+to show or hide information to specific identities. This is complicated to get
+right, and also application dependent. For example in a medical context, when a
+patient logs his weight in a medical record like system, she can determine who
+can see that information. But suppose she is treated for something by more than
+one doctor. Doctor 1 stores her blood pressure, and only the patient and doctor
+1 can see it. Then doctor 2 comes along. He cannot see that the blood pressure
+is available in the medical record, so how can he request access? What happens
+if he also stores a blood pressure measurement: can doctor 1 see it or not?
+Scenarios like that need to be carefully considered in the proper context.
 
 Blockstack
 ----------
@@ -56,7 +56,8 @@ supports [attestation][10].
 It was not clear to us how Blockstack treats privacy of profile information. [On
 their website, they write:][11]
 
-> Profiles can contain both private and public information, which is attested to by the user and can be verified by peers and select authorities.
+> Profiles can contain both private and public information, which is attested to
+by the user and can be verified by peers and select authorities.
 
 [And:][12]
 
@@ -71,19 +72,19 @@ into if we would use Blockstack in applications.
 Eris
 ----
 As always, we wanted to try and actually write some code as part of this
-investigation. We wanted to do that with smart contracts, so we started looking
+investigation. We wanted to do that with smart contracts. So we started looking
 into [Eris][13], a "smart contract application platform". Using Eris, it is easy
-to setup your own private blockchain and start experimenting with smart
-contracts, without actually needing to pay Ether or something like that.
+to setup your own private blockchain and start experimenting. It is free that
+way, you don't need any Ether or something similar.
 
 Since this is the first time that we wanted to write our own smart contracts, we
-started looking at their documentation. We were impressed. They have very good
+started looking at their documentation. We were impressed. They have good
 [tutorials][14], both on how to setup the system, and on Solidity. I
 particularly enjoyed reading their articles about architecture of Solidity
-contracts: [The Five Types Model][15] and [An Action-Driven Architecture][16].
+contracts ([The Five Types Model][15] and [An Action-Driven Architecture][16]).
 
 Unfortunately time ran out before we could actually build our own first simple
-identity system, but we have some ideas on how to continue from here.
+identity system. But we do have some ideas on how to continue from here.
 
 Interesting Links
 -----------------
