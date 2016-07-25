@@ -38,7 +38,7 @@ We didn't find out how this works exactly. Where is that private information sto
 
 ### uPort
 
-*TODO*
+[Consensys][21] is working on a self-sourced identity system called [uPort][22], using the Ethereum blockchain and IPFS for storing your personal data. It purportedly includes a selective disclosure mechanism and a reputation system. They are collaborating with Canonical, Microsoft, BlockApps and Blockstack but haven’t released any source code yet.
 
 ### Eris
 
@@ -78,3 +78,5 @@ If you’d like to read more about decentralized identity then this collection o
 [18]: https://bitcoinmagazine.com/articles/deterministic-wallets-advantages-flaw-1385450276
 [19]: https://github.com/Charterhouse/charterhouse.github.io/issues/3
 [20]: http://bitcoin.stackexchange.com/questions/37488/eli5-whats-the-difference-between-a-child-key-and-a-hardened-child-key-in-bip3
+[21]: https://consensys.net
+[22]: https://medium.com/@ConsenSys/uport-the-wallet-is-the-new-browser-b133a83fe73
