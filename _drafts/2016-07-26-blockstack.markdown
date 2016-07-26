@@ -51,7 +51,7 @@ Once the block with your transaction is confirmed then you can check your balanc
 	    "transaction_hash": "c7ec9f0312751d77591fae93f106fa086dab09f89e50159d6e4724d8c7630f16"
 	}
 
-The following command will let you know in more detail the status of your name registration order. It will stay in this state until 6 confirmations are completed in the bitcoin blockchain:
+The following command will let you know in more detail the status of your name registration order. It will stay in this state until 6 confirmations are completed in the bitcoin blockchain (you may notice some hashes and addresses are obfuscated from here on):
 
 	$ blockstack info
 
@@ -76,18 +76,18 @@ The following command will let you know in more detail the status of your name r
 	    "server_version": "0.0.13.1"
 	}
 
-Until the name registration is confirmed in the blockchain you will get the following response when you check what names are owned by you (addresses are obfuscated):
+Until the name registration is confirmed in the blockchain you will get the following response when you check what names are owned by you:
 
-$ blockstack names
-{
-    "addresses": [
-        {
-            "address": "YYYYYYYY",
-            "names_owned": []
-        }
-    ],
-    "names_owned": []
-}
+	$ blockstack names
+	{
+	    "addresses": [
+	        {
+	            "address": "YYYYYYYY",
+	            "names_owned": []
+	        }
+	    ],
+	    "names_owned": []
+	}
 
 Once the requested name registration is confirmed you can run the following command to see it:
 
