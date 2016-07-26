@@ -22,11 +22,11 @@ When you talk about using identity in practical applications, the term "selectiv
 
 ### Blockstack
 
-[Blockstack][8] is an identity platform based on blockchain technology. It does not require a specific blockchain, but because it is currently the most reliable one it is currently overlaid on top of the Bitcoin blockchain. In the Blockstack [white paper][24], the authors outline a number of other reasons that they moved from [namecoin][23] to bitcoin that relate to superior security of the bitcoin blockchain (due to it's size and overall hash rate as well as the networks stability compared to namecoin). It has a [pricing scheme for registering identities][9], and it supports [attestation][10].
+[Blockstack][8] is an identity platform based on blockchain technology. It does not require a specific blockchain, but because it is currently the most reliable one it is overlaid on top of the Bitcoin blockchain. In the Blockstack [white paper][24], the authors outline a number of other reasons that they moved from [namecoin][23] to bitcoin that relate to superior security of the bitcoin blockchain (due to it's size and overall hash rate as well as the networks stability compared to namecoin). It has a [pricing scheme for registering identities][9], and it supports [attestation][10].
 
 Blockstack has a layered architecture. It maintains a naming system as a separate logical layer on top of the underlying blockchain on which it operates. Blockstack uses the underlying blockchain to achieve consensus on the state of this naming system and binds names to data records. Specifically, it uses the underlying blockchain as a communication channel for announcing state changes, as any changes to the state of name-value pairs can only be announced in new blockchain blocks. Relying on the consensus protocol of the underlying blockchain, Blockstack can provide a total ordering for all operations supported by the naming system, like name registrations, updates and transfers.
 
-###### Profile Privacy and Storage
+#### Profile Privacy and Storage
 Public profiles are constructed through the compilation of public statements, signed by the user that owns the profile. Extended profiles are public profiles extended with other information that has not been made publicly accessible. This information is privately released by the user to selected parties. When a user authorizes another party to access information, the user encrypts the information with the party's key and hosts it in a publicly-accessible location. The authorized party is sent the link to the information and is able to decrypt it and extend the public profile with the private information ([Identity][11], [Profiles][12]).
 
 Clients read data values from the data layer and verify their authenticity by checking that either the data’s hash exists or the data includes a signature with the name owner’s public key.
@@ -45,10 +45,10 @@ The user is free to update the private information, such as an address, and the 
 
 Blockstack supports multiple storage mechanisms. The mechanisms specifically mentioned are AWS S3, IPFS & Syndicate. Data is discovered by hash or URL. Having an off-chain data storage mechanism increases the amount of data that can be associated with a name as it becomes quite expensive to store larger amounts of data in the blockchain. There are also longer term concerns with trying to store private data under PGP schemes like that used by bitcoin in the blockchain directly. This of course could change if blockchains of the future support quantum safe encryption methods.
 
-###### Identity Attestation
+#### Identity Attestation
 This subject is covered in the Blockstack documentation page on [Identity Attestation][10] which allows for verified profiles and software proofs (social networks proofs, domain name proofs, key proofs and facial recognition proofs) where different types of attestation can be done such as peer or authority attestations with all of this added to the immutable profile of the users name record.
 
-###### Blockstack CLI usage overview
+#### Blockstack CLI usage overview
 
 It was straightforward to install Blockstack CLI in order to test and use Blockstack. In order to actually make use of blockstack it was necessary to purchase some bitcoin. This was done by visiting a bitcoin exchange, purchasing some bitcoin and sending a required amount to a blockstack address generated in the following way:
 
@@ -374,7 +374,7 @@ So, we will attempt to add some immutable data (this requires a write of an inte
 
 Attempting to upgrade the CLI as suggested. This caused an update to cryptography package but all other dependent packages were already up-to-date. I tried again the above command to attach immutable data to the name record and got the same response. Also, attempted to try adding mutable data but this also failed with a different error complaining that the data supplied is not a dictionary.
 
-###### Conclusion
+#### Conclusion
 
 This was not intened to be a comprehensive transcript of the usage of Blockstack but more a dabble to get a feel for the technology. My sentiment at this moment is that it is pretty well thought out but not stable once you start to use its more advanced features relating to adding mutable and immutable data to extend the profile. Waiting around for your name to be registered is "blockchain transaction confirmation time" bound but in practice I do not see this as a major issue as it should not be very often that the user will register a new identity. Applications that infrequently update the immutable aspect of the identity profile should also not run into major issues but applications that do, could run into problems if they require fast read-back of the immutable data from their identity profile.
 
