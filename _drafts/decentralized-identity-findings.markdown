@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Decentralized Identity - Findings"
-author(s): Stefan van den Oord, Mark Spanbroek & Mark Hennessy
+author: Stefan van den Oord, Mark Spanbroek & Mark Hennessy
 ---
 
 This week we have done research and experiments around the topic of Decentralized Identity. We started by writing down [our thoughts on what decentralized identity is about][1].
@@ -53,12 +53,12 @@ This subject is covered in the Blockstack documentation page on [Identity Attest
 It was straightforward to install Blockstack CLI in order to test and use Blockstack. In order to actually make use of blockstack it was necessary to purchase some bitcoin. This was done by visiting a bitcoin exchange, purchasing some bitcoin and sending a required amount to a blockstack address generated in the following way:
 
 	$ blockstack price mahennessy.id
-	
+
 	{
-	    "name_price": 25000, 
-	    "preorder_tx_fee": 17205, 
-	    "register_tx_fee": 15865, 
-	    "total_estimated_cost": 96502, 
+	    "name_price": 25000,
+	    "preorder_tx_fee": 17205,
+	    "register_tx_fee": 15865,
+	    "total_estimated_cost": 96502,
 	    "update_tx_fee": 38432
 	}
 
@@ -72,7 +72,7 @@ It was straightforward to install Blockstack CLI in order to test and use Blocks
 	    "message": "Send bitcoins to the address specified."
 	}
 
-Once the block with your transaction is confirmed then you can check your balacnce at your Blockstack address. (The balance below is in terms of BTC):
+Once the block with your transaction is confirmed then you can check your balance at your Blockstack address. (The balance below is in terms of BTC):
 
 	$ blockstack balance
 
@@ -137,7 +137,7 @@ $ blockstack names
 Once the requested name registration is confirmed you can run the following command to see it:
 
 	$ blockstack names
-	
+
 	{
 	    "addresses": [
 	        {
@@ -155,7 +155,7 @@ Once the requested name registration is confirmed you can run the following comm
 A more detailed lookup can be performed using the following command:
 
 	$ blockstack lookup mahennessy.id
-	
+
 	{
 	    "profile": {
 	        "@type": "Person",
@@ -202,17 +202,17 @@ A more detailed lookup can be performed using the following command:
 To get more information about where the name registration sits in the underlying blockchain and including the expiration date of the registered name:
 
 	$ blockstack whois mahennessy.id
-	
+
 	{
-	    "approx_expiration_date": "2017 Aug 09 00:42:31 UTC", 
-	    "block_preordered_at": 421831, 
-	    "block_renewed_at": 421842, 
-	    "expire_block": 474437, 
-	    "has_zonefile": true, 
-	    "last_transaction_height": 421856, 
-	    "last_transaction_id": "af29447dfd52bce8243450485ea2f02145f0c6456a0b8a6b99a26e3859a5a2b1", 
-	    "owner_address": "1NH3QdobQnmyeqospDd2bRqWNvpbJ8i8eJ", 
-	    "owner_script": "76a914e9634e782b469683fc7e9a7e3143fd719185980b88ac", 
+	    "approx_expiration_date": "2017 Aug 09 00:42:31 UTC",
+	    "block_preordered_at": 421831,
+	    "block_renewed_at": 421842,
+	    "expire_block": 474437,
+	    "has_zonefile": true,
+	    "last_transaction_height": 421856,
+	    "last_transaction_id": "af29447dfd52bce8243450485ea2f02145f0c6456a0b8a6b99a26e3859a5a2b1",
+	    "owner_address": "1NH3QdobQnmyeqospDd2bRqWNvpbJ8i8eJ",
+	    "owner_script": "76a914e9634e782b469683fc7e9a7e3143fd719185980b88ac",
 	    "zonefile_hash": "ad0135dcd269c8a52c40ac5556ee15d2d829ac74"
 	}
 
@@ -222,9 +222,9 @@ It is also possible to update, migrate and transfer a name based on blockstack c
 	usage: blockstack [-h]
 	                  {balance,configure,deposit,import,info,lookup,migrate,names,ping,price,register,renew,revoke,set_advanced_mode,transfer,update,whois}
 	                  ...
-	
+
 	Blockstack cli version 0.0.13.7
-	
+
 	positional arguments:
 	  {balance,configure,deposit,import,info,lookup,migrate,names,ping,price,register,renew,revoke,set_advanced_mode,transfer,update,whois}
 	    balance             Get the account balance
@@ -244,7 +244,7 @@ It is also possible to update, migrate and transfer a name based on blockstack c
 	    transfer            Transfer a name to a new address
 	    update              Set the zone file for a name
 	    whois               Look up the blockchain info for a name
-	
+
 	optional arguments:
 	  -h, --help            show this help message and exit
 	{}
@@ -254,10 +254,10 @@ It is also possible to enable more advanced commands that allow data associated 
 	$ blockstack set_advanced_mode
 	usage: blockstack set_advanced_mode [-h] status
 	blockstack set_advanced_mode: error: too few arguments
-	
+
 	Interactive prompt engaged.  Press Ctrl+C to quit
 	Help for 'set_advanced_mode': Enable advanced commands
-	
+
 	On or Off. ('status'): On  
 	{
 	    "status": true
@@ -269,9 +269,9 @@ Check the newly enabled commands:
 	usage: blockstack [-h]
 	                  {balance,configure,deposit,import,info,lookup,migrate,names,ping,price,register,renew,revoke,set_advanced_mode,transfer,update,whois,consensus,delete_account,delete_immutable,delete_mutable,get_account,get_all_names,get_immutable,get_mutable,get_name_blockchain_history,get_name_blockchain_record,get_name_zonefile,get_nameops_at,get_names_in_namespace,get_names_owned_by_address,get_namespace_blockchain_record,get_namespace_cost,import_wallet,list_accounts,list_immutable_data_history,list_update_history,list_zonefile_history,lookup_snv,name_import,namespace_preorder,namespace_ready,namespace_reveal,put_account,put_immutable,put_mutable,rpc,rpcctl,set_zonefile_hash,wallet}
 	                  ...
-	
+
 	Blockstack cli version 0.0.13.7
-	
+
 	positional arguments:
 	  {balance,configure,deposit,import,info,lookup,migrate,names,ping,price,register,renew,revoke,set_advanced_mode,transfer,update,whois,consensus,delete_account,delete_immutable,delete_mutable,get_account,get_all_names,get_immutable,get_mutable,get_name_blockchain_history,get_name_blockchain_record,get_name_zonefile,get_nameops_at,get_names_in_namespace,get_names_owned_by_address,get_namespace_blockchain_record,get_namespace_cost,import_wallet,list_accounts,list_immutable_data_history,list_update_history,list_zonefile_history,lookup_snv,name_import,namespace_preorder,namespace_ready,namespace_reveal,put_account,put_immutable,put_mutable,rpc,rpcctl,set_zonefile_hash,wallet}
 	    balance             Get the account balance
@@ -341,20 +341,20 @@ Check the newly enabled commands:
 	    set_zonefile_hash   Directly set the hash associated with the name in the
 	                        blockchain.
 	    wallet              Query wallet information
-	
+
 	optional arguments:
 	  -h, --help            show this help message and exit
 	{}
 
-So, we will attempt to add some immutable data (this requires a write of an integrty hash to the blockchain) to the name record:
+So, we will attempt to add some immutable data (this requires a write of an integrity hash to the blockchain) to the name record:
 
 	Marks-MacBook-Pro-2:.blockstack mark.hennessy$ blockstack put_immutable
 	usage: blockstack put_immutable [-h] name data_id data
 	blockstack put_immutable: error: too few arguments
-	
+
 	Interactive prompt engaged.  Press Ctrl+C to quit
 	Help for 'put_immutable': Put immutable data into a zonefile
-	
+
 	The name to receive the data ('name'): mahennessy.id
 	The name of the data ('data_id'): mydata
 	The JSON-formatted data to store ('data'): { "field1" : "value1", "field2" : "value2" }
