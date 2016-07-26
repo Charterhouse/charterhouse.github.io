@@ -332,3 +332,5 @@ Attempting to upgrade the CLI as suggested. This caused an update to cryptograph
 ### Conclusion
 
 This was not intended to be a comprehensive transcript of the usage of Blockstack but more a dabble to get a feel for the technology. My sentiment at this moment is that it is pretty well thought out but not stable once you start to use its more advanced features relating to adding mutable and immutable data to extend the profile. Waiting around for your name to be registered is "blockchain transaction confirmation time" bound but in practice I do not see this as a major issue as it should not be very often that the user will register a new identity. Applications that infrequently update the immutable aspect of the identity profile should also not run into major issues but applications that do, could run into problems if they require fast read-back of the immutable data from their identity profile.
+
+[Questions? Comments?](https://github.com/Charterhouse/charterhouse.github.io/issues/4)
