@@ -8,6 +8,8 @@ This week we have done research and experiments around the topic of Decentralize
 
 There is a lot to take in on this topic. If you're not careful to limit the scope, it quickly becomes large and complicated. For example, it may seem logical to make an identity system hierarchical in terms of how strong an identity is. Higher up in the hierarchy identities are stronger (think e.g. identities issued by governments), but for things like simple web site logins you want to use an identity lower in the hierarchy.
 
+### Identity management
+
 This made us think of BIP32 and HD wallets. We learned that there are some intricacies when dealing with hierarchical keys. For instance under certain conditions it is actually [possible to prove][5] that two public keys have a parent-child relationship. Or if you’re not careful, you could inadvertently [expose your private key as well][18]. So you need to be careful about exposing public keys, which given their name is rather unexpected. We also learned what the [difference is between a hardened and a non-hardened public key][20]: hardened keys are not vulnerable to the above, but if you want to derive public keys from another (extended) public key, those derived keys are non-hardened.
 
 As an aside: we were wondering what would be a good name for an application that manages your identities. The term “wallet” suggests “money”, not “identity”.
@@ -21,6 +23,8 @@ Another part of identity is _attestations_. You can setup an identity system so 
 When you talk about using identity in practical applications, the term "selective disclosure" will pop up sooner or later. It simply means the ability to show or hide information to specific identities. This is complicated to get right, and also application dependent. For example in a medical context, when a patient logs his weight in a medical record like system, she can determine who can see that information. But suppose she is treated for something by more than one doctor. Doctor 1 stores her blood pressure, and only the patient and doctor 1 can see it. Then doctor 2 comes along. He cannot see that the blood pressure is available in the medical record, so how can he request access? What happens if he also stores a blood pressure measurement: can doctor 1 see it or not? Scenarios like that need to be carefully considered in the proper context.
 
 ### Blockstack
+
+There are a number of decentalized identity systems in development. We'll quickly touch upon a few of them.
 
 [Blockstack][8] is an identity platform based on blockchain technology. It does not require a specific blockchain, but because it is currently the most reliable one it is overlaid on top of the Bitcoin blockchain. In the Blockstack [white paper][24], the authors outline a number of other reasons that they moved from [namecoin][23] to bitcoin that relate to superior security of the bitcoin blockchain (due to it's size and overall hash rate as well as the networks stability compared to namecoin). It has a [pricing scheme for registering identities][9], and it supports [attestation][10].
 
@@ -52,6 +56,10 @@ As part of our investigation into Blockstack we have used their software to crea
 
 [Consensys][21] is working on a self-sourced identity system called [uPort][22], using the Ethereum blockchain and IPFS for storing your personal data. It purportedly includes a selective disclosure mechanism and a reputation system. They are collaborating with Canonical, Microsoft, BlockApps and Blockstack but haven’t released any source code yet.
 
+### ChainAnchor
+
+MIT seems to be developing an identity system that attempts to address [not only the technical and privacy aspects of identity, but also the legal framework][2]. It’s called [ChainAnchor][3], but there is not much information available yet.
+
 ### Eris
 
 As always, we wanted to try and actually write some code as part of this investigation. We wanted to do that with smart contracts. So we started looking into [Eris][13], a "smart contract application platform". Using Eris, it is easy to setup your own private blockchain and start experimenting. It is free that way, you don't need any Ether or something similar.
@@ -59,10 +67,6 @@ As always, we wanted to try and actually write some code as part of this investi
 Since this is the first time that we wanted to write our own smart contracts, we started looking at their documentation. We were impressed. They have good [tutorials][14], both on how to setup the system, and on Solidity. We particularly enjoyed reading their articles about architecture of Solidity contracts ([The Five Types Model][15] and [An Action-Driven Architecture][16]).
 
 Unfortunately time ran out before we could actually build our own first simple identity system. But we do have some ideas on how to continue from here.
-
-### ChainAnchor
-
-MIT seems to be developing an identity system that attempts to address [not only the technical and privacy aspects of identity, but also the legal framework][2]. It’s called [ChainAnchor][3], but there is not much information available yet.
 
 ### Further reading
 
