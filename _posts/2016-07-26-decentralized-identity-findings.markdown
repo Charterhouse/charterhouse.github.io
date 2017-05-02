@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Decentralized Identity - Findings"
-author: Stefan van den Oord, Mark Spanbroek & Mark Hennessy
+author: Stefan van den Oord, Mark Spanbroek, Mark Hennessy
 ---
 
 This week we have done research and experiments around the topic of Decentralized Identity. We started by writing down [our thoughts on what decentralized identity is about][1].
