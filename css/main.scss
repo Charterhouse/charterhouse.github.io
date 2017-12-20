@@ -6,7 +6,8 @@
 
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -15,8 +16,10 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 $text-color:       #111;
+$text-color-quote: lighten($text-color, 40%);
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
+$link-color:       #2980b9;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
